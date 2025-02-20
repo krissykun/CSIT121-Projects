@@ -1,0 +1,19 @@
+h1 {
+color: rgb(178, 154, 215)
+}
+
+h2 {
+color: rgb(105,174,207)
+}
+
+h3 {
+color: rgb(94,180,152)
+}
+
+.highlight {
+background-color: yellow;
+}
+
+.bold {
+color: blueviolet
+}
