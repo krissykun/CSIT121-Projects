@@ -3,12 +3,17 @@ h1 {
 }
 
 main {
-    margin: 1em;
+    margin: 3em;
+    height: fit-content;
+    background-color: #a3a9f7;
+    padding: 10px;
 }
 
 .container {
     width: 100%;
     text-align: center;
+    background-color: #a3a9f7;
+
 }
 
 ul {
@@ -16,7 +21,6 @@ ul {
     padding: 10px;
     margin: 0px;
     overflow: hidden;
-    background-color: #a3a9f7;
     border-radius: 50px;
     text-align: center;
     position: relative;
@@ -41,6 +45,7 @@ li:hover {
 }
 
 body {
+    background-image: url(bg.jpg);
     font-family: verdana; 
     background-color: #a3a9f7;
     color: #5c5f8b; 
@@ -61,6 +66,13 @@ p {
 }
 
 /* Special */
+
+.center {
+    display: block;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 .active {
     color: #f7f3fe;
@@ -83,7 +95,10 @@ p {
     color: #712df3 
 }
 
-
+.normal {
+    border-radius: 0%;
+    background-color: #a3a9f7;
+}
 /* color Palette:
 h1 - #0516f2
 h2 - #3644f4
