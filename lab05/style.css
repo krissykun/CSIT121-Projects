@@ -46,8 +46,9 @@ article, header, footer {
 
 .sidebar {
     border-radius: 5px;
-    margin-bottom: 5px;
-    margin-top: -15px;
+    width: 80%; 
+    margin: 0 auto; 
+    text-align: center; 
 }
 
 .sidebar ul {
@@ -75,22 +76,22 @@ article, header, footer {
 
 
 
-@media (min-width: 768px) {
+@media (max-width: 600px) {
     .container {
         display: grid;
-        grid-template-columns: 3fr 1fr; /* Blog content (3fr), Sidebar (1fr) */
-        grid-template-rows: auto 1fr auto; /* Header (auto), Main Content (1fr), Footer (auto) */
+        grid-template-columns: 3fr 1fr; 
+        grid-template-rows: auto 1fr auto; 
         gap: 20px;
         min-height: 100vh;
     }
 
     .blog {
-        grid-column: 1 / 2; /* Blog content stays in the first column */
+        grid-column: 1 / 2; 
         grid-row: 2 / 3;
     }
 
     .sidebar {
-        grid-column: 2 / 3; /* Sidebar stays in the second column */
+        grid-column: 2 / 3; 
         position: sticky;
         top: 20px;
         height: fit-content;
@@ -98,7 +99,7 @@ article, header, footer {
     }
 
     footer, header {
-        grid-column: 1 / 3; /* Footer spans both columns */        
+        grid-column: 1 / 3;     
         text-align: center;
         padding: 10px;
     }
