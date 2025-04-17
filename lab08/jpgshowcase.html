@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Image Format Showcase</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <main>
+            <header>
+                
+                <div class="container">
+                    <h1 class="header">Image Format Showcase</h1>
+
+                    <div class="topnav" id="myTopnav">
+                        <a href="index.html"> Home </a>
+                        <a href="gifshowcase.html"> GIF Showcase </a>
+                        <a class="active" href="jpgshowcase.html"> JPG Showcase </a>
+                        <a href="pngshowcase.html"> PNG Showcase </a>
+                        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <script>
+                    function myFunction() {
+                        var x = document.getElementById("myTopnav");
+                        if (x.className === "topnav") {
+                            x.className += " responsive";
+                        } else {
+                            x.className = "topnav";
+                        }
+                    }
+                </script>
+            </header>
+            
+            <section>
+                <h2>JPG Showcase</h2>
+                <p>Images belonging to the .jpg (Joint Photographic Group) file type are best for photographs and support up to 16.7 million colors.</p>
+                <p>JPGs are the most common image format.</p>
+                <img class="center" src="images/skyrimcake.JPG" alt="A birthday cake with the skyrim opening cutscene printed on">
+                <p>The image I chose is an JPG of a custom birthday cake with an image of an iconic Skyrim cutscene printed on it.</p>
+                <p>I decided on this image because Skyrim is one of my favorite games and I enjoy how silly this cake idea is.</p>
+
+                <p>This image was located at: <a target="_blank" class="normal" href="https://www.reddit.com/r/skyrim/comments/1idckid/skyrim_birthday_cake/"> Reddit </a></p>
+            </section>
+        
+            <footer>
+                <p class="footer">© 2025 Khrystian Green-Dorsey. All rights reserved.</p>
+            </footer>
+        </main>
+    </body>
+</html>
+
+<!-- Be at least 3 HTML Files. -->
+<!-- Contain: Image description, file type, why chose and source -->
+<!-- structure tags, heading tags, -->
