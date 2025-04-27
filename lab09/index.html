@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
-<head>
+<html lang="en">
+    <head>
     <meta charset="UTF-8">
     <title>Reads the XML data using JavaScript</title>
 
@@ -43,6 +44,12 @@
         .button:hover {
             color: black;
             background: white;
+        }
+
+        .center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
     </style>
 
@@ -95,17 +102,16 @@
             document.getElementById("id").innerHTML = table;
         }
     </script>
-</head>
+    </head>
 
-<body>
-    <center>
+    <body>
+    <div class="center">
         <button type="button" class="button" onclick="loadXMLDoc()">
             Get Employees Details
         </button>
-    </center>
+    </div>
 
     <br><br>
     <table id="id"></table>
-</body>
-
+    </body>
 </html>
