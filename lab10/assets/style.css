@@ -1,11 +1,13 @@
 body {
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Verdana', Times, serif;
     margin: 20px;
     padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: aquamarine;
+    background-image: url(./img/coins.avif);
+    background-size: cover;
+    background-color: goldenrod;
     display: flex;
     flex-direction: column;
 }
@@ -22,18 +24,19 @@ body {
 
 section {
     background: whitesmoke;
-    border: 3px solid grey;
-    padding: 20px;
+    border: 3px solid black;
+    padding: 15px;
     box-shadow: 2px 2px 10px;
     border-radius: 10px;
     position: relative; /* positioning context for nav */
-    z-index: -1; /* keeps this at the bottom of the content stack */
+    z-index: 0; /* keeps this at the bottom of the content stack */
 }
 
-h2 {
+h2, footer, header {
     text-align: center;
     margin: 0;
 }
+
 
 @media (max-width: 600px) {
     .content {
@@ -52,7 +55,7 @@ h2 {
     height: 100%;
     width: 0;
     position: fixed; /* never moves */
-    z-index: 1; /* always on top */
+    z-index: 2; /* always on top */
     left: 0;
     top: 0;
     background-color: black; /* fallback color */
@@ -104,14 +107,45 @@ h2 {
 }
 
 /* Changes to the nav button position */
-span {
+.nav-btn {
     position: absolute;
-    top: -15px;
-    right: 20px;
+    top: -20px;
+    right: 15px;
     transform: none;
     background-color: black;
     color: white;
     padding: 10px 20px;
     border-radius: 10px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    /* testing gradient */
+}
+
+/* nav button hover animation */
+.nav-btn:hover {
+    background: linear-gradient(270deg, blue, orange);    
+    background-size: 600% 600%;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    transition: background 0.3s ease;
+    animation: colorShift 4s ease infinite;
+}
+
+  /* colorShift keyframes */
+@keyframes colorShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* details dropdown styles */
+details {
+    background: whitesmoke;
+    border: 3px solid black;
+    padding: 15px;
+    box-shadow: 2px 2px 10px;
+    border-radius: 10px;
+    position: relative; /* positioning context for nav */
+    z-index: 0; /* keeps this at the bottom of the content stack */
 }

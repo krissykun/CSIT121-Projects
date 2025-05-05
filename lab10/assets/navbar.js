@@ -1,9 +1,9 @@
-/* Open when someone clicks on the span element */
+/* Nav overlay opens when the button is pressed */
 function openNav() {
-    document.getElementById("myNav").style.width = "100%";
+    document.getElementById("Navbar").style.width = "100%";
 }
 
-  /* Close when someone clicks on the "x" symbol inside the overlay */
+  /* X closes the navbar overlay */
 function closeNav() {
-    document.getElementById("myNav").style.width = "0%";
+    document.getElementById("Navbar").style.width = "0%";
 } 

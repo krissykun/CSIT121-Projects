@@ -9,7 +9,7 @@
     </head>
     <body>
         <!-- The overlay -->
-        <div id="myNav" class="overlay">
+        <div id="Navbar" class="overlay">
         <!-- Button to close the overlay navigation -->
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <!-- Overlay content -->
@@ -23,33 +23,46 @@
         </div>
 
         <header>
-            <h1 style="text-align: center;">Web Standards: Payment Method Identifiers</h1>
+            <h1>Web Standards: Payment Method Identifiers</h1>
         </header>
 
         <div class="content">
 
             <!--Opens nav menu-->
-            <span onclick="openNav()">Site Navigation</span> 
+            <button class="nav-btn" onclick="openNav()">Site Navigation</button> 
 
             <section>
-                <h2>Introduction to PMIs (Payment Method Identifiers)</h2>
-                <p>Payment Method Identifiers (PMI) are unique identifiers assigned to payment methods used in transactions. They help in tracking and managing payment methods across different platforms.</p>
-                <p>PMIs are essential for ensuring secure and efficient payment processing. They are used in various payment systems, including credit cards, digital wallets, and online banking.</p>
-                <p>In this document, we will explore the different types of PMIs, their formats, and how they are used in payment processing.</p>
-                <p>PMIs can vary in length and format depending on the payment method. For example, credit card numbers are typically 16 digits long, while digital wallet identifiers may have different formats.</p>
-                <p>Understanding PMIs is crucial for developers and businesses involved in payment processing. It helps in ensuring compliance with industry standards and regulations.</p>
-                <p>In conclusion, Payment Method Identifiers (PMI) play a vital role in the payment processing ecosystem. They help in identifying and managing payment methods securely and efficiently.</p>
-                <p>For more information on PMIs, you can refer to the official documentation provided by payment processors and financial institutions.</p>
-                <p>In summary, PMIs are unique identifiers assigned to payment methods used in transactions. They help in tracking and managing payment methods across different platforms.</p>
-                <p>PMIs are essential for ensuring secure and efficient payment processing. They are used in various payment systems, including credit cards, digital wallets, and online banking.</p>
-                <p>In this document, we will explore the different types of PMIs, their formats, and how they are used in payment processing.</p>
+                <h2>Introduction</h2>
+
+                <h3>What are web standards?</h3>
+                <p>
+                    Web standards are a set of guidelines and best practices for creating and maintaining web content. 
+                    They ensure that web documents can be used, shared and developed across different platforms without issue. They also make it easier to keep pages accessible, to integrate different languages/technologies and future proof things. 
+                    Some popular ones are HTML, XML, WCAG, and EPUB, among others.
+                </p>
+                <p>
+                    Without these guidelines, the internet would be a much more chaotic and much less accessible place. 
+                    They ensure that web documents can be used, shared and developed across different platforms without issue. 
+                    Web developers and designers need to keep them in mind to keep the web safe and usable for all.
+                </p>
+
+                <h3>The purpose of this site:</h3>
+                <p>
+                    This site in particular intends to provide its readers (that's you!) with information on one specific web standard. 
+                    In this case, that's Payment Method Identifiers (PMIs).
+                </p>
+                <p>
+                    PMIs are used to identify payment methods in a standardized way. 
+                    They're used by payment processors (think Stripe), banks, and other financial institutions to ensure payments are processed properly and safely.
+                </p>
+
             </section>
         </div>
 
-        <footer style="text-align: center;">
+        <footer>
             <p>&copy; 2025 Khrystian Green-Dorsey. All rights reserved.</p>
         </footer>
 
-        <script src="assets/navbar.js"></script>
+        <script src="assets/navbar.js"></script> <!-- Script for the nav menu, accessed externally -->
     </body>
 </html>

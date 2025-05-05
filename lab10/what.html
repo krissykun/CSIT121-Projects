@@ -9,7 +9,7 @@
     </head>
     <body>
         <!-- The overlay -->
-        <div id="myNav" class="overlay">
+        <div id="Navbar" class="overlay">
         
         <!-- Button to close the overlay navigation -->
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -25,7 +25,7 @@
         </div>
 
         <header>
-            <h1 style="text-align: center;">Web Standards: Payment Method Identifiers (PMI)</h1>
+            <h1>Web Standards: Payment Method Identifiers (PMI)</h1>
 
             
         </header>
@@ -33,17 +33,81 @@
         <div class="content">
 
             <!--Opens nav menu-->
-            <span onclick="openNav()">Navigation</span> 
+            <button class="nav-btn" onclick="openNav()">Site Navigation</button> 
 
-            <section>
+            <section> <!-- Image Intro -->
                 <h2>What are PMIs?</h2>
+                <img src="./assets/img/fingerprint.avif" alt="a digital graphic resembling a fingerprint" width="500" height="300">
+                <p>
+                    Think of them as a sort of "fingerprint" for payment methods.
+                    Just like a fingerprint is unique to each person, a PMI is unique to each payment method.
+
+                    <p>
+                        Payment Method Identifiers (PMIs) are unique identifiers used to represent different payment methods in a standardized way. 
+                        They are used by payment processors, banks, and other financial institutions to ensure that payments are processed accurately and securely.
+                    </p>
+
+                    <p>
+                        They can be found in two forms: URL-based PMIs or standardized PMIs. 
+                        Each is covered in more detail below:
+                    </p>
+                </p>
             </section>
+
+            <section> <!-- Deeper Explanation -->
+                <h4>url-based PMIs</h4>
+                    <p>
+                        URL-based PMIs are formatted as a typical URL, which makes them easy to use in web apps and APIs.
+                        For example, a URL-based PMI for a service like Apple Pay might look like this:
+                        <code>https://apple.com/apple-pay</code>
+                    </p>
+
+                    <p>
+                        Steps for validating a url-based PMI:
+                        <ol>
+                            <li>If url's scheme is not "https", invalid</li>
+                            <li>If url's username or password is not the empty string, invalid</li>
+                            <li>Otherwise, valid</li>
+                    </p>
+
+                    <details>
+                        <summary>Examples: </summary>
+                            <p>Valid:</p>
+                            <ul>
+                                <li><code>https://example.com/pay</code></li>
+                                <li><code>https://example.com/pay/version/1</code></li>
+                            </ul>
+                            <p>Invalid:</p>
+                            <ul>
+                                <li><code>http://username:password@example</code>; uses http://, a username and a password</li>
+                                <li><code>unknown://example.com/pay</code>; uses an unknown scheme</li>
+                            </ul>
+                    </details>
+
+                <h4>Standardized PMIs</h4>
+                    <p>
+                        Standardized PMIs are in the form of a string . 
+                        They are typically used in offline payment systems and are designed to be easily recognizable and understandable by both consumers and merchants.
+                        Standardized PMIs are typically formatted as a string of characters, which makes them easy to use in offline applications and systems.
+                        For example, a standardized PMI for a credit card payment method might look like this:
+                        <code>credit-card</code>
+                    </p>
+
+                    <p>
+                        For specifics on how this form of PMI is validated, expand the section below:
+                    </p>
+
+                    <details>
+                        <summary>Validation Details</summary>
+                        <p>ABC</p>
+                    </details>
         </div>
 
-        <footer style="text-align: center;">
+        <footer>
             <p>&copy; 2025 Khrystian Green-Dorsey. All rights reserved.</p>
         </footer>
 
         <script src="assets/navbar.js"></script>
+
     </body>
 </html>
