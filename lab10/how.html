@@ -31,10 +31,63 @@
         <div class="content">
 
             <!--Opens nav menu-->
-            <button onclick="openNav()">Navigation</button> 
+            <button class="nav-btn" onclick="openNav()">Site Navigation</button> 
 
             <section>
                 <h2>How are PMIs Used?</h2>
+                <img src="./assets/img/paypal.avif" alt="a photo of a smartphone using the paypal app with a laptop viewing an online store in the background" width="500" height="300">
+
+                <p>
+                    Have you wondered how your payments are processed when you shop online? 
+                    Payment Method Identifiers (PMIs) play a crucial role in this process. 
+                    Payment Method Identifiers (PMIs) help determine which payment methods are available for your transaction. 
+                    They guide your browser in presenting compatible options like credit cards, digital wallets, or bank transfers. 
+                    After you select a method, the browser interacts with the appropriate payment handler to process your payment securely.
+                </p>
+            </section>
+            <section>
+                <p>PMIs are used inside the Payment Request API, which lets websites request payment from users in a secure and fast way. Developers use PMIs to tell the browser which payment methods they accept.</p>
+
+                <p>Here are some examples of how it's used in code:</p>
+
+                    <details>
+                        <summary>Initiating a payment request</summary>
+<!-- Unfortunately these code blocks have to look like this I think -->
+<pre><code class="code-block">request.show().then((paymentResponse) => {
+    // Here we would process the payment. For this demo, simulate immediate success:
+    paymentResponse.complete("success").then(() => {
+        // For demo purposes:
+        introPanel.style.display = "none";
+        successPanel.style.display = "block";
+    });
+});
+</code></pre>
+                    </details>
+
+                    <details>
+                        <summary>Pre-authorizing transactions</summary>
+<pre><code class="code-block">const paymentRequest = new PaymentRequest(
+    [{ supportedMethods: "https://example.com/preauth" }],
+    details,
+);
+
+// Send `CanMakePayment` event to the payment handler.
+paymentRequest
+    .canMakePayment()
+    .then((res) => {
+        if (res) {
+        // The payment handler has pre-authorized a transaction
+        // with some static amount, e.g., USD $1.00.
+        } else {
+        // Pre-authorization failed or payment handler not installed.
+        }
+    })
+    .catch((err) => {
+        // Unexpected error occurred.
+    });
+</code></pre>
+                    </details>
+                </p>
             </section>
         </div>
 

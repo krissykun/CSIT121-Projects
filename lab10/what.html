@@ -68,6 +68,10 @@
                             <li>If url's scheme is not "https", invalid</li>
                             <li>If url's username or password is not the empty string, invalid</li>
                             <li>Otherwise, valid</li>
+                        </ol>
+                        <p>
+                            The scheme is the part of the URL that indicates the protocol used to access the resource. 
+                            In this case, it should be "https" to ensure a secure connection.
                     </p>
 
                     <details>
@@ -86,20 +90,44 @@
 
                 <h4>Standardized PMIs</h4>
                     <p>
-                        Standardized PMIs are in the form of a string . 
-                        They are typically used in offline payment systems and are designed to be easily recognizable and understandable by both consumers and merchants.
-                        Standardized PMIs are typically formatted as a string of characters, which makes them easy to use in offline applications and systems.
-                        For example, a standardized PMI for a credit card payment method might look like this:
-                        <code>credit-card</code>
+                        Standardized PMIs take the form of a string that represents a standardized payment method. 
+                        For example, a standardized PMI for a payment method like Visa might look like this:
+                        <code>visa-card</code>
                     </p>
 
                     <p>
-                        For specifics on how this form of PMI is validated, expand the section below:
+                        Steps for validating a standardized PMI:
+                        <ol>
+                            <li>If string conforms to the syntax of a standardaized PMI, valid</li>
+                            <li>Otherwise, invalid</li>
+                        </ol>
+                    </p>
+                    <p>
+                        The syntax of a standardized PMI is given by the following (luckily, users won't need to think about it in this way):
+                    </p>
+                    <p>
+                        stdpmi = part *( "-" part )
+                        <br>
+                        part = 1loweralpha *( DIGIT / loweralpha )
+                        <br>
+                        loweralpha =  %x61-7A 
+                        <br>
+
                     </p>
 
+
                     <details>
-                        <summary>Validation Details</summary>
-                        <p>ABC</p>
+                        <summary>Examples:</summary>
+                        <p>Valid:</p>
+                        <ul>
+                            <li><code>"basic-card"</code></li>
+                        </ul>
+                        <p>Invalid:</p>
+                        <ul>
+                            <li><code>basic-💳</code>; uses a character outside the accepted range</li>
+                            <li><code>Basic-Card</code>; uses uppercase characters</li>
+                            <li><code>¡basic-*-card!</code>; uses characters outside the accepted range</li>
+                        </ul>
                     </details>
         </div>
 
