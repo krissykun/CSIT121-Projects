@@ -160,6 +160,7 @@ details {
     max-width: 100%;
 }
 
+/* Code
 .code-block {
     display: block;
     background: #272822;
@@ -169,6 +170,5 @@ details {
     font-family: Consolas, monospace;
     font-size: 0.95em;
     white-space: pre-wrap; /* wraps long lines */
-    overflow-x: none;       /* allows scrolling if needed */
     line-height: 1.5;
 }
