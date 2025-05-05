@@ -41,16 +41,16 @@
                 <p>
                     Think of them as a sort of "fingerprint" for payment methods.
                     Just like a fingerprint is unique to each person, a PMI is unique to each payment method.
+                </p>
 
-                    <p>
-                        Payment Method Identifiers (PMIs) are unique identifiers used to represent different payment methods in a standardized way. 
-                        They are used by payment processors, banks, and other financial institutions to ensure that payments are processed accurately and securely.
-                    </p>
+                <p>
+                    Payment Method Identifiers (PMIs) are unique identifiers used to represent different payment methods in a standardized way. 
+                    They are used by payment processors, banks, and other financial institutions to ensure that payments are processed accurately and securely.
+                </p>
 
-                    <p>
-                        They can be found in two forms: URL-based PMIs or standardized PMIs. 
-                        Each is covered in more detail below:
-                    </p>
+                <p>
+                    They can be found in two forms: URL-based PMIs or standardized PMIs. 
+                    Each is covered in more detail below:
                 </p>
             </section>
 
@@ -63,58 +63,60 @@
                     </p>
 
                     <p>
-                        Steps for validating a url-based PMI:
-                        <ol>
-                            <li>If url's scheme is not "https", invalid</li>
-                            <li>If url's username or password is not the empty string, invalid</li>
-                            <li>Otherwise, valid</li>
-                        </ol>
-                        <p>
-                            The scheme is the part of the URL that indicates the protocol used to access the resource. 
-                            In this case, it should be "https" to ensure a secure connection.
+                    Steps for validating a url-based PMI:
+                    </p>
+
+                    <ol>
+                        <li>If url's scheme is not "https", invalid</li>
+                        <li>If url's username or password is not the empty string, invalid</li>
+                        <li>Otherwise, valid</li>
+                    </ol>
+
+                    <p>
+                        The scheme is the part of the URL that indicates the protocol used to access the resource. 
+                        In this case, it should be "https" to ensure a secure connection.
                     </p>
 
                     <details>
                         <summary>Examples: </summary>
-                            <p>Valid:</p>
-                            <ul>
-                                <li><code>https://example.com/pay</code></li>
-                                <li><code>https://example.com/pay/version/1</code></li>
-                            </ul>
-                            <p>Invalid:</p>
-                            <ul>
-                                <li><code>http://username:password@example</code>; uses http://, a username and a password</li>
-                                <li><code>unknown://example.com/pay</code>; uses an unknown scheme</li>
-                            </ul>
+                        <p>Valid:</p>
+                        <ul>
+                            <li><code>https://example.com/pay</code></li>
+                            <li><code>https://example.com/pay/version/1</code></li>
+                        </ul>
+                        <p>Invalid:</p>
+                        <ul>
+                            <li><code>http://username:password@example</code>; uses http://, a username and a password</li>
+                            <li><code>unknown://example.com/pay</code>; uses an unknown scheme</li>
+                        </ul>
                     </details>
 
                 <h4>Standardized PMIs</h4>
-                    <p>
-                        Standardized PMIs take the form of a string that represents a standardized payment method. 
-                        For example, a standardized PMI for a payment method like Visa might look like this:
-                        <code>visa-card</code>
-                    </p>
+                <p>
+                    Standardized PMIs take the form of a string that represents a standardized payment method. 
+                    For example, a standardized PMI for a payment method like Visa might look like this:
+                    <code>visa-card</code>
+                </p>
 
-                    <p>
-                        Steps for validating a standardized PMI:
-                        <ol>
-                            <li>If string conforms to the syntax of a standardaized PMI, valid</li>
-                            <li>Otherwise, invalid</li>
-                        </ol>
-                    </p>
-                    <p>
-                        The syntax of a standardized PMI is given by the following (luckily, users won't need to think about it in this way):
-                    </p>
-                    <p>
-                        stdpmi = part *( "-" part )
-                        <br>
-                        part = 1loweralpha *( DIGIT / loweralpha )
-                        <br>
-                        loweralpha =  %x61-7A 
-                        <br>
+                <p>
+                    Steps for validating a standardized PMI:
+                </p>
+                <ol>
+                    <li>If string conforms to the syntax of a standardaized PMI, valid</li>
+                    <li>Otherwise, invalid</li>
+                </ol>
 
-                    </p>
-
+                <p>
+                    The syntax of a standardized PMI is given by the following (luckily, users won't need to think about it in this way):
+                </p>
+                <p>
+                    stdpmi = part *( "-" part )
+                    <br>
+                    part = 1loweralpha *( DIGIT / loweralpha )
+                    <br>
+                    loweralpha =  %x61-7A 
+                    <br>
+                </p>
 
                     <details>
                         <summary>Examples:</summary>
@@ -129,6 +131,7 @@
                             <li><code>¡basic-*-card!</code>; uses characters outside the accepted range</li>
                         </ul>
                     </details>
+            </section>
         </div>
 
         <footer>
