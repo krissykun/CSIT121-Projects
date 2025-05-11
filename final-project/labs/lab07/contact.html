@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <title>Contact Form</title>
+    </head>
+
+    <header>
+        <nav>
+            <h1>Wuthering Waves Forte Tier List</h1>
+            <a href="tier-list.html">Tier List</a>
+            <a class="active"  href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <body>
+        <h1>Contact Me</h1>
+
+        <form>
+            <p>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name">
+            </p>
+
+            <p>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+            </p>
+
+            <p>
+                <label for="comment">Comments:</label>
+                <textarea id="comment" name="comment"></textarea>
+            </p>
+
+            <p>
+                <label>Favorite Resonator?</label>
+                <input type="radio" name="favorite" value="Thanos"> Xiangli Yao
+                <input type="radio" name="favorite" value="Loki"> Yinlin
+                <input type="radio" name="favorite" value="Loki"> Yuanwu
+                <input type="radio" name="favorite" value="Loki"> Camellya
+            </p>
+            
+
+            <p>
+                <label for="ranking">Who's the scariest?</label>
+                <select id="ranking" name="ranking">
+                    <option>Camellya</option>
+                    <option>Calcharo</option>
+                    <option>Mortefi</option>
+                    <option>Danjin</option>
+                </select>
+            </p>
+            
+            <p>
+                <label>
+                    <input type="checkbox" name="newsletter"> Subscribe to our Blog?
+                </label>
+            </p>
+
+            <p>
+                <input type="submit" value="Submit">
+            </p>
+        
+        </form>
+    </body>
+</html>

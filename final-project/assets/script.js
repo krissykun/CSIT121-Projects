@@ -10,9 +10,12 @@ document.addEventListener('mousemove', function(e) {
     },      600);
 });
 
-// makes links open in new tab always
+// makes external links open in new tab always
 document.querySelectorAll('a[href]').forEach(link => {
-    link.setAttribute('target', '_blank');
-    link.setAttribute('rel', 'noopener noreferrer');
+    const url = new URL(link.href, window.location.href);
+    if (url.hostname !== window.location.hostname) {
+        link.setAttribute('target', '_blank');
+        link.setAttribute('rel', 'noopener noreferrer');
+    }
 });
 

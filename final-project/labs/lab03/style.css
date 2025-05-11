@@ -1,0 +1,42 @@
+h1 {
+text-align: center;
+color: rgb(178, 154, 215)
+}
+
+h2 {
+color: rgb(105,174,207)
+}
+
+h3 {
+color: rgb(94,180,152)
+}
+
+.highlight {
+background-color: yellow;
+}
+
+.bold {
+color: blueviolet
+}
+
+body {
+    font-family: 'Times New Roman';   
+    background-color: rgb(15,18,31);
+    color: whitesmoke; 
+}
+
+p {
+text-indent: 1em;
+}
+
+a {
+color: orangered
+}
+
+.footer {
+color: rgb(178, 154, 215)
+}
+
+#thebeginning {
+font-weight: bold;
+}

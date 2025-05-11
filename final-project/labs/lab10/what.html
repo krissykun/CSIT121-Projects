@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Lab 10: PMIs</title>
+
+        <link rel="stylesheet" href="assets/style.css">
+    </head>
+    <body>
+        <!-- The overlay -->
+        <div id="Navbar" class="overlay">
+        
+        <!-- Button to close the overlay navigation -->
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <!-- Overlay content -->
+            <div class="overlay-content">
+                <a href="index.html">Home</a>
+                <a href="what.html">What are PMIs?</a>
+                <a href="why.html">Why are PMIs important?</a>
+                <a href="how.html">How are PMIs used?</a>
+                <a href="references.html">References</a>
+            </div>
+        
+        </div>
+
+        <header>
+            <h1>Web Standards: Payment Method Identifiers (PMI)</h1>
+
+            
+        </header>
+
+        <div class="content">
+
+            <!--Opens nav menu-->
+            <button class="nav-btn" onclick="openNav()">Site Navigation</button> 
+
+            <section> <!-- Image Intro -->
+                <h2>What are PMIs?</h2>
+                <img src="./assets/img/fingerprint.avif" alt="a digital graphic resembling a fingerprint" width="500" height="300">
+                <p>
+                    Think of them as a sort of "fingerprint" for payment methods.
+                    Just like a fingerprint is unique to each person, a PMI is unique to each payment method.
+                </p>
+
+                <p>
+                    Payment Method Identifiers (PMIs) are unique identifiers used to represent different payment methods in a standardized way. 
+                    They are used by payment processors, banks, and other financial institutions to ensure that payments are processed accurately and securely.
+                </p>
+
+                <p>
+                    They can be found in two forms: URL-based PMIs or standardized PMIs. 
+                    Each is covered in more detail below:
+                </p>
+            </section>
+
+            <section> <!-- Deeper Explanation -->
+                <h4>url-based PMIs</h4>
+                    <p>
+                        URL-based PMIs are formatted as a typical URL, which makes them easy to use in web apps and APIs.
+                        For example, a URL-based PMI for a service like Apple Pay might look like this:
+                        <code>https://apple.com/apple-pay</code>
+                    </p>
+
+                    <p>
+                    Steps for validating a url-based PMI:
+                    </p>
+
+                    <ol>
+                        <li>If url's scheme is not "https", invalid</li>
+                        <li>If url's username or password is not the empty string, invalid</li>
+                        <li>Otherwise, valid</li>
+                    </ol>
+
+                    <p>
+                        The scheme is the part of the URL that indicates the protocol used to access the resource. 
+                        In this case, it should be "https" to ensure a secure connection.
+                    </p>
+
+                    <details>
+                        <summary>Examples: </summary>
+                        <p>Valid:</p>
+                        <ul>
+                            <li><code>https://example.com/pay</code></li>
+                            <li><code>https://example.com/pay/version/1</code></li>
+                        </ul>
+                        <p>Invalid:</p>
+                        <ul>
+                            <li><code>http://username:password@example</code>; uses http://, a username and a password</li>
+                            <li><code>unknown://example.com/pay</code>; uses an unknown scheme</li>
+                        </ul>
+                    </details>
+
+                <h4>Standardized PMIs</h4>
+                <p>
+                    Standardized PMIs take the form of a string that represents a standardized payment method. 
+                    For example, a standardized PMI for a payment method like Visa might look like this:
+                    <code>visa-card</code>
+                </p>
+
+                <p>
+                    Steps for validating a standardized PMI:
+                </p>
+                <ol>
+                    <li>If string conforms to the syntax of a standardaized PMI, valid</li>
+                    <li>Otherwise, invalid</li>
+                </ol>
+
+                <p>
+                    The syntax of a standardized PMI is given by the following (luckily, users won't need to think about it in this way):
+                </p>
+                <p>
+                    stdpmi = part *( "-" part )
+                    <br>
+                    part = 1loweralpha *( DIGIT / loweralpha )
+                    <br>
+                    loweralpha =  %x61-7A 
+                    <br>
+                </p>
+
+                    <details>
+                        <summary>Examples:</summary>
+                        <p>Valid:</p>
+                        <ul>
+                            <li><code>"basic-card"</code></li>
+                        </ul>
+                        <p>Invalid:</p>
+                        <ul>
+                            <li><code>basic-💳</code>; uses a character outside the accepted range</li>
+                            <li><code>Basic-Card</code>; uses uppercase characters</li>
+                            <li><code>¡basic-*-card!</code>; uses characters outside the accepted range</li>
+                        </ul>
+                    </details>
+            </section>
+        </div>
+
+        <footer>
+            <p>&copy; 2025 Khrystian Green-Dorsey. All rights reserved.</p>
+        </footer>
+
+        <script src="assets/navbar.js"></script>
+
+    </body>
+</html>

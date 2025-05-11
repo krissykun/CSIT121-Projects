@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MED-EL Evaluation</title>
+
+        <style>
+            body {
+                font-family: 'Times New Roman', Times, serif;
+                margin: 20px;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            
+            .container {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                gap: 20px;
+                max-width: 800px;
+            }
+            
+            section {
+                background: whitesmoke;
+                border: 3px solid grey;
+                padding: 20px;
+                box-shadow: 2px 2px 10px;
+                border-radius: 10px;
+            }
+
+            li {
+                margin: 15px;
+            }
+
+            @media (max-width: 600px) {
+                .container {
+                    align-items: center;
+                }
+
+                section,img {
+                    width: 90%;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <h1 style="text-align: center;">MED-EL UI/UX Evaluation</h1>
+                <img src="img/medel-homepage.png" alt="screenshot of the MED-EL English home page" width="800" height="500">
+            </header>
+
+            <section>
+                <h2>Basic Website Information</h2>
+                <h3>Website Name & URL</h3>
+                <p>MED-EL - <a href="https://www.medel.com/en-us">https://www.medel.com/en-us</a></p>
+    
+                <h3>Target Audience</h3>
+                <p>The target audience for this website is deaf or hard of hearing people, as well as their families. Specifically targeting those looking into hearing implants.</p>
+    
+                <h3>Organizational Style</h3>
+                <p>This website follows a hierarchical organizational style.</p>
+            </section>
+    
+            <section>
+                <h3>CRAP Design Principles</h3>
+                    <ul>
+                        <li>Contrast - The page content is primarily black text over white backgrounds or white text over red backgrounds. Text is easy to read and sections are clearly separated with background colors, it's easy to see where images end and begin. However, Accessibility Checker says that users with low vision or colorblindness may struggle reading some parts.</li>
+                        <li>Repetition - Consistent use of fonts and colors throughout the site reinforces brand identity and aids navigation.</li>
+                        <li>Alignment - The content of pages is in the center of the viewport and properly spaced in sections. </li>
+                        <li>Proximity - Articles, sections and links are properly grouped together with similar ones.</li>
+                    </ul>
+            </section>
+
+            <section>
+                <h2>Accesibility & Usability</h2>
+                <h3>Accesibility Score</h3>
+                <p>This site's accesibility score according to <a href="https://www.accessibilitychecker.org/">Accessibility Checker</a> is 69%</p>
+                
+                <h3>Effectiveness</h3>
+                <p>The website effectively supports users in completing actions accurately. Clear navigation menus and well organized content help users find product information, support resources, and community news/events with ease.</p>
+                
+                <h3>Efficiency</h3>
+                <p>Users can perform tasks quickly due to the layout and design of the site. Key information is accessible within a few clicks, and the search bar helps to locate specific content quickly.​</p>
+    
+                <h3>Engagement</h3>
+                <p>The site is pleasant to use and appropriate for its industry. Quality images, detailed videos (with captions), and user terstimonies enhance visitor engagement, providing a comprehensive understanding of MED-EL's products and services.</p>
+            </section>
+    
+            <section>
+                <h2>Recommendations</h2>
+                <ul>
+                    <li>The addition of a section that allows visitors to speak to a representative or chatbot could improve user experience.</li>
+                    <li>Alternate color palette settings could be included to make it easier for colorblind or low vision visitors. This aligns with suggestions from Accesibility Checker.</li>
+                    <li>Refine the alt-text of some links and images to be more helpful for blind or low vision visitors. This aligns with suggestions from Accesibility Checker.</li>
+                </ul>
+            </section>
+        </div>
+    </body>
+</html>
