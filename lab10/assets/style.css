@@ -160,15 +160,3 @@ details {
     max-width: 100%;
 }
 
-/* Code
-.code-block {
-    display: block;
-    background: #272822;
-    color: #f8f8f2;
-    padding: 1em;
-    border-radius: 8px;
-    font-family: Consolas, monospace;
-    font-size: 0.95em;
-    white-space: pre-wrap; /* wraps long lines */
-    line-height: 1.5;
-}
