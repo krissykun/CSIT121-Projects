@@ -4,6 +4,17 @@
     flex-direction: column;
 }
 
+* {
+    cursor: url('https://cur.cursors-4u.net/cursors/cur-11/cur1054.cur'), auto !important;
+    
+}
+
+body {
+    font-family: 'Verdana', sans-serif;
+    line-height: 1.5;
+    background: url('https://www.transparenttextures.com/patterns/stardust.png'), #000;
+    background-repeat: repeat;
+}
 .blog {
     width: 100%;
 }
@@ -74,7 +85,35 @@ article, header, footer {
     color: blueviolet;
 }
 
+/* Lab pages nav strip */
+.nav-strip {
+    background: #eee;
+    border-bottom: 2px solid #ccc;
+    padding: 0.5rem 1rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: 'Verdana', sans-serif;
+    font-size: 0.95rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
 
+.nav-strip a {
+    text-decoration: none;
+    color: #333;
+    padding: 0.25rem 0.5rem;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.nav-strip a:hover {
+    background: #ddd;
+    border-color: #aaa;
+}
 
 @media (min-width: 750px) {
     .container {
@@ -102,5 +141,23 @@ article, header, footer {
         grid-column: 1 / 3;     
         text-align: center;
         padding: 10px;
+    }
+}
+
+.sparkle {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: linear-gradient(orange, blue);
+    border-radius: 50%;
+    pointer-events: none;
+    animation: fadeOut 0.6s forwards;
+    z-index: 9999;
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+        transform: scale(2);
     }
 }

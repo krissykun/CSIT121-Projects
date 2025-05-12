@@ -6,13 +6,42 @@
         <title>MED-EL Evaluation</title>
 
         <style>
+            /* Lab pages nav strip */
+            .nav-strip {
+                background: #eee;
+                border-bottom: 2px solid #ccc;
+                padding: 0.5rem 1rem;
+                display: flex;
+                gap: 1rem;
+                justify-content: flex-start;
+                align-items: center;
+                font-family: 'Verdana', sans-serif;
+                font-size: 0.95rem;
+                position: sticky;
+                top: 0;
+                z-index: 999;
+            }
+
+            .nav-strip a {
+                text-decoration: none;
+                color: #333;
+                padding: 0.25rem 0.5rem;
+                border: 1px solid transparent;
+                border-radius: 4px;
+                transition: background 0.2s ease, border-color 0.2s ease;
+            }
+
+            .nav-strip a:hover {
+                background: #ddd;
+                border-color: #aaa;
+            }
+
             body {
                 font-family: 'Times New Roman', Times, serif;
-                margin: 20px;
+                margin: 0; /* Reset body margin */
                 padding: 0;
-                display: flex;
-                justify-content: center;
-                align-items: center;
+                display: block; /* Reset flex display */
+                background: url('https://www.transparenttextures.com/patterns/stardust.png'), #000;
             }
             
             .container {
@@ -47,6 +76,13 @@
         </style>
     </head>
     <body>
+        <div class="nav-strip">
+            <a href="/final-project/index.html">Home</a>
+            <a href="/final-project/about.html">About</a>
+            <a href="/final-project/projects.html">Lab Showcase</a>
+            <a href="/final-project/tools.html">Tools</a>
+            <a href="https://krissykun.github.io/CSIT121-Projects/lab06/index.html">View Original</a>
+        </div>
         <div class="container">
             <header>
                 <h1 style="text-align: center;">MED-EL UI/UX Evaluation</h1>
@@ -99,5 +135,6 @@
                 </ul>
             </section>
         </div>
+        <script src="/final-project/assets/script.js"></script>
     </body>
 </html>

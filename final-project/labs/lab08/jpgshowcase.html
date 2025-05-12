@@ -5,36 +5,30 @@
         <title>Image Format Showcase</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="styles.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
+
+        <div class="nav-strip">
+            <a href="/final-project/index.html">Home</a>
+            <a href="/final-project/about.html">About</a>
+            <a href="/final-project/projects.html">Lab Showcase</a>
+            <a href="/final-project/tools.html">Tools</a>
+            <a href="https://krissykun.github.io/CSIT121-Projects/lab08/index.html">View Original</a>
+        </div>
         <main>
             <header>
                 
                 <div class="container">
                     <h1 class="header">Image Format Showcase</h1>
-
-                    <div class="topnav" id="myTopnav">
-                        <a href="index.html"> Home </a>
-                        <a href="gifshowcase.html"> GIF Showcase </a>
-                        <a class="active" href="jpgshowcase.html"> JPG Showcase </a>
-                        <a href="pngshowcase.html"> PNG Showcase </a>
-                        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                            <i class="fa fa-bars"></i>
-                        </a>
-                    </div>
+                    <nav>
+                        <ul>
+                            <li><a href="index.html"> Home </a></li>
+                            <li><a href="gifshowcase.html"> GIF Showcase </a></li>
+                            <li class="active"><a class="active" href="jpgshowcase.html"> JPG Showcase </a></li>
+                            <li><a href="pngshowcase.html"> PNG Showcase </a></li>
+                        </ul>
+                    </nav>
                 </div>
-
-                <script>
-                    function myFunction() {
-                        var x = document.getElementById("myTopnav");
-                        if (x.className === "topnav") {
-                            x.className += " responsive";
-                        } else {
-                            x.className = "topnav";
-                        }
-                    }
-                </script>
             </header>
             
             <section>
@@ -52,6 +46,7 @@
                 <p class="footer">© 2025 Khrystian Green-Dorsey. All rights reserved.</p>
             </footer>
         </main>
+        <script src="/final-project/assets/script.js"></script>
     </body>
 </html>
 

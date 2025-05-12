@@ -4,56 +4,13 @@
     <head>
     <meta charset="UTF-8">
     <title>Lab 09: XML Bonus</title>
+    <link rel="stylesheet" href="/final-project/assets/style.css"
 
-    <!-- CSS -->
-    <style>
-        table {
-            border-collapse: collapse;
-            width: 100%;
-        }
 
-        th,
-        td {
-            text-align: left;
-            padding: 8px;
-        }
+    
 
-        tr:nth-child(even) {
-            background-color: #7ce2af
-        }
 
-        th {
-            background-color: #7c0f65;
-            color: white;
-        }
-
-        .button {
-            position: relative;
-            text-align: center;
-            padding: 20px;
-            border: 4px solid rgb(55, 12, 211);
-            background: rgba(20, 192, 4, 0.5);
-            color: rgb(230, 36, 78);
-            outline: none;
-            border-radius: 30px;
-            font-size: 30px;
-            width: 500px;
-
-        }
-
-        .button:hover {
-            color: black;
-            background: white;
-        }
-
-        .center {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-    </style>
-
-    <!--JavaScript-->
+    <!-- JavaScript -->
     <script>
         let isTableVisible = false;
     
@@ -104,6 +61,13 @@
     </head>
 
     <body>
+        <div class="nav-strip">
+            <a href="/final-project/index.html">Home</a>
+            <a href="/final-project/about.html">About</a>
+            <a href="/final-project/projects.html">Lab Showcase</a>
+            <a href="/final-project/tools.html">Tools</a>
+            <a href="https://krissykun.github.io/CSIT121-Projects/lab09/bonus.html">View Original</a>
+        </div>
     <div class="center">
         <button type="button" class="button" onclick="loadXMLDoc()">
             Get Employees Details
@@ -112,6 +76,7 @@
 
     <br><br>
     <table id="id"></table>
+    <script src="/final-project/assets/script.js"></script>
     </body>
 
 </html>
