@@ -1,3 +1,4 @@
+/* Main */
 /* Universal & Body styles */
 * {
     margin: 0;
@@ -68,7 +69,7 @@ ul, dl {
 }
 
 /* holder for the main content sections */
-.container {
+.container-main {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -77,13 +78,13 @@ ul, dl {
     border: 3px double #ccc;
     border-radius: 8px;
     padding: 1.5rem;
-    color: #333;
+    color: black;
     border: 8px solid #000;
     image-rendering: pixelated;
     box-shadow: inset 0 0 0 2px #fff;
 }
 
-/* nav sidebar styling */
+/* main nav sidebar styling */
 nav {
     width: 160px;
     position: relative;
@@ -120,6 +121,7 @@ main {
     padding: 2rem;
     border: 1px solid #ccc;
     box-shadow: 3px 3px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
 }
 
 /* Header (mostly for the logo image here) */
@@ -226,16 +228,14 @@ nav a:hover {
 
 /* Lab pages nav strip */
 .nav-strip {
-    background: #eee;
     border-bottom: 2px solid #ccc;
     padding: 0.5rem 1rem;
     display: flex;
     gap: 1rem;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     font-family: 'Verdana', sans-serif;
     font-size: 0.95rem;
-    position: sticky;
     top: 0;
     z-index: 999;
 }
@@ -247,13 +247,19 @@ nav a:hover {
     border: 1px solid transparent;
     border-radius: 4px;
     transition: background 0.2s ease, border-color 0.2s ease;
+    color: white;
+
 }
 
 .nav-strip a:hover {
     background: #ddd;
     border-color: #aaa;
+    color: cyan;
+    text-shadow: 0 0 5px cyan, 0 0 10px cyan;
 }
 
+
+/* Specific lab changes */
 .button {
     position: relative;
     text-align: center;
@@ -265,5 +271,90 @@ nav a:hover {
     border-radius: 30px;
     font-size: 30px;
     width: 500px;
+}
 
+#lab04-title {
+    text-align: center;
+}
+
+.lab04-cite {
+    background-color: silver;
+    padding: 10px;
+    border: #000 solid 2px;
+}
+
+section {
+    margin: 20px 0;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.tier-s {
+    background-color: #7fbfff;
+}
+
+.tier-a {
+    background-color: #7fff7f;
+}
+
+.tier-b {
+    background-color: #ffff7f;
+}
+
+.tier-c {
+    background-color: #ffbf7f;
+}
+
+.tier-d {
+    background-color: #ff7f7f;
+}
+
+td {
+    color: black;
+}
+
+.tl-nav {
+    display: flex;
+    justify-content: center; /* Center the links horizontally */
+    align-items: center;
+    gap: 20px; /* Add spacing between the links */
+    margin-bottom: 20px;
+}
+
+.tl-nav a {
+    text-decoration: none;
+    color: #000;
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 10px 20px; /* Ensure consistent padding for equal size */
+    border-radius: 4px;
+    display: inline-block; /* Ensure proper box sizing */
+    width: 150px; /* Set a fixed width for equal size */
+    text-align: center; /* Center text inside the box */
+    transition: all 0.3s ease;
+}
+
+.lab09 table{
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    border: 2px solid #ccc;
+}
+
+.container-main2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+    border: 3px double #ccc;
+    border-radius: 8px;
+    padding: 1.5rem;
+    color: black;
+    border: 8px solid #000;
+    image-rendering: pixelated;
+    box-shadow: inset 0 0 0 2px #fff;
+    background-color: darkgrey;
 }

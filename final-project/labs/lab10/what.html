@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Lab 10: PMIs</title>
 
-        <link rel="stylesheet" href="assets/style.css">
+        <link rel="stylesheet" href="/final-project/assets/style.css">
     </head>
     <body>
         <div class="nav-strip">
@@ -15,32 +15,19 @@
             <a href="/final-project/tools.html">Tools</a>
             <a href="https://krissykun.github.io/CSIT121-Projects/lab10/index.html">View Original</a>
         </div>
-        <!-- The overlay -->
-        <div id="Navbar" class="overlay">
         
-        <!-- Button to close the overlay navigation -->
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <!-- Overlay content -->
-            <div class="overlay-content">
+        <h1 id="lab04-title">Web Standards: Payment Method Identifiers (PMI)</h1>
+
+        <div class="container-main">
+            <nav>
                 <a href="index.html">Home</a>
                 <a href="what.html">What are PMIs?</a>
                 <a href="why.html">Why are PMIs important?</a>
                 <a href="how.html">How are PMIs used?</a>
                 <a href="references.html">References</a>
-            </div>
-        
-        </div>
+            </nav>
 
-        <header>
-            <h1>Web Standards: Payment Method Identifiers (PMI)</h1>
-
-            
-        </header>
-
-        <div class="content">
-
-            <!--Opens nav menu-->
-            <button class="nav-btn" onclick="openNav()">Site Navigation</button> 
+        <main>
 
             <section> <!-- Image Intro -->
                 <h2>What are PMIs?</h2>
@@ -67,7 +54,7 @@
                         URL-based PMIs are formatted as a typical URL, which makes them easy to use in web apps and APIs.
                         For example, a URL-based PMI for a service like Apple Pay might look like this:
                         <code>https://apple.com/apple-pay</code>
-                    </p>
+                    </p><br>
 
                     <p>
                     Steps for validating a url-based PMI:
@@ -82,7 +69,7 @@
                     <p>
                         The scheme is the part of the URL that indicates the protocol used to access the resource. 
                         In this case, it should be "https" to ensure a secure connection.
-                    </p>
+                    </p><br>
 
                     <details>
                         <summary>Examples: </summary>
@@ -97,13 +84,13 @@
                             <li><code>unknown://example.com/pay</code>; uses an unknown scheme</li>
                         </ul>
                     </details>
-
+                <br><br>
                 <h4>Standardized PMIs</h4>
                 <p>
                     Standardized PMIs take the form of a string that represents a standardized payment method. 
                     For example, a standardized PMI for a payment method like Visa might look like this:
                     <code>visa-card</code>
-                </p>
+                </p><br>
 
                 <p>
                     Steps for validating a standardized PMI:
@@ -123,7 +110,7 @@
                     <br>
                     loweralpha =  %x61-7A 
                     <br>
-                </p>
+                </p><br>
 
                     <details>
                         <summary>Examples:</summary>
@@ -140,7 +127,7 @@
                     </details>
             </section>
         </div>
-
+    </main>
         <footer>
             <p>&copy; 2025 Khrystian Green-Dorsey. All rights reserved.</p>
         </footer>
